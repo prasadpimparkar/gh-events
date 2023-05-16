@@ -5,6 +5,12 @@ on:
       - opened
       - closed
   workflow_dispatch:
+  push:
+    branches:
+      - master
+      - 'dev-*'
+    path-ignore:
+      -'.github/workflows/*'
 jobs:
  deploy:
   runs-on: ubuntu-latest
