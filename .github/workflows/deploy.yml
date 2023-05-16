@@ -1,8 +1,9 @@
 name: deploy
 on: 
   pull_request:
-    - opened
-    - closed
+    types:
+      - opened
+      - closed
   workflow_dispatch:
 jobs:
  deploy:
